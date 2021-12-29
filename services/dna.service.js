@@ -1,8 +1,7 @@
-const mongoose = require("mongoose");
+var DNASequence = require('../models/dna.model')
 
-exports.hasMutation = (req, res) => {
-    try{
-        const dna = req.body.dna;
+exports.hasMutation = ()=>{
+    try {
         let validExpMutation = /AAAA|TTTT|CCCC|GGGG/g;
         let hadValidMutation = false;
 
@@ -64,9 +63,9 @@ exports.hasMutation = (req, res) => {
             }
         }
         
-        res.status(403).send({error: false, code: 403, message: 'has not had a mutation'})
-
-    }catch (err){
-        res.status(504).send({error: true, code: 504, message: 'Error interno.'});
-    }
+        return users;
+    } catch (e) {
+        // Log Errors
+        throw Error('Error while Paginating Users')
+    }  
 };

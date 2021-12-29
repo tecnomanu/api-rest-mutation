@@ -1,10 +1,10 @@
 const express = require("express"),
-  DNAsequenceCtrl = require("../controllers/dna");
+  DNAsequenceController = require("../controllers/dna.controller");
 
 const routes = express.Router();
 
 routes
   .route("/mutation")
-  .get(DNAsequenceCtrl.hasMutation);
+  .get(DNAsequenceController.hasMutation);
 
 module.exports = routes;

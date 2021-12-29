@@ -19,8 +19,8 @@ app.get('/', function (req, res) {
     res.send('Saludos desde express');
 });
 
-const router = require('./api-routes/routes');
-app.use(router);
+const DNARouter = require('./api-routes/dna.route');
+app.use(DNARouter);
 
 app.use(function(req, res, next) {
     response = {

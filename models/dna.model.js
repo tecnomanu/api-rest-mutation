@@ -2,8 +2,8 @@
 const mongoose = require("mongoose"),
   Schema = mongoose.Schema;
 
-var dnaSequenceSchema = new Schema({
+var DNASequenceSchema = new Schema({
   dna: { type: Array },
 });
 
-module.exports = mongoose.model("DNASequence", dnaSequenceSchema);
+module.exports = mongoose.model("DNASequence", DNASequenceSchema);
