@@ -2,6 +2,8 @@
 const mongoose = require("mongoose"),
   Schema = mongoose.Schema;
 
+//Creamos el Scheme de los ADN para poder buscar e insertar
+//resultados en la base de datos.
 var DNASequenceSchema = new Schema({
   dna: { type: Array },
   hasMutation: { type:Boolean}

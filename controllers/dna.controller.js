@@ -9,8 +9,10 @@ exports.hasMutation = async (req, res) => {
         if(!dna)
             return res.status(400).send({error: true, code: 400, message: 'Value `dna` is required.'});
 
+        //Consultamos hasMutation en el Service de los ADN.
         const response = await DNAService.hasMutation(dna);
 
+        //Retornamos el resultado que respondio el metodo hasMutation anterior.
         res.status(response.code).send(response);
     }catch (err){
         res.send({error: true, code: 500, message: `${err}`});
