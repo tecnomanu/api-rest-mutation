@@ -4,6 +4,7 @@ const mongoose = require("mongoose"),
 
 var DNASequenceSchema = new Schema({
   dna: { type: Array },
+  hasMutation: { type:Boolean}
 });
 
 module.exports = mongoose.model("DNASequence", DNASequenceSchema);

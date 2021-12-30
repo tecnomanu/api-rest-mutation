@@ -15,6 +15,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride());
 
+require('./models/dna.model');
+
+mongoose.connect("mongodb://localhost/dna-mutation", (err, res)=>{
+    if(err)
+        console.log(`Error on connection to Database: ${err}`);
+    else
+        console.log(`Connection to DB success`);
+
+    app.listen(port, () => {
+        console.log(`El servidor está inicializado en el puerto ${port}`);
+    });
+});
+
 app.get('/', function (req, res) {
     res.send('Saludos desde express');
 });
@@ -29,15 +42,4 @@ app.use(function(req, res, next) {
         message: 'Forbidden endpoint'
     };
     res.status(404).send(response);
-});
-
-mongoose.connect("mongodb://localhost/dna-mutation", (err, res)=>{
-    if(err)
-        console.log(`Error on connection to Database: ${err}`);
-    else
-        console.log(`Connection to DB success`);
-
-    app.listen(port, () => {
-        console.log(`El servidor está inicializado en el puerto ${port}`);
-    });
 });

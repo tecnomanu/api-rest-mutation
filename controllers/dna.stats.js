@@ -1,6 +1,5 @@
-const DNAService = require("../services/dna.service");
-
-exports.hasMutation = async (req, res) => {
+const StatsService = require("../services/stats.service");
+exports.getStats = async (req, res) => {
     try{
         //Extraemos los valores del campo 'dna' recibido en el cuerpo
         const dna = req.body.dna;     
@@ -9,7 +8,7 @@ exports.hasMutation = async (req, res) => {
         if(!dna)
             return res.status(400).send({error: true, code: 400, message: 'Value `dna` is required.'});
 
-        const response = await DNAService.hasMutation(dna);
+        const response = await StatsService.getStats(dna);
 
         res.status(response.code).send(response);
     }catch (err){
