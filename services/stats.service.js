@@ -24,7 +24,7 @@ exports.getStats = async ()=>{
         return { 
             count_mutations,
             count_no_mutation,
-            ratio: count_mutations/count_no_mutation 
+            ratio: count_no_mutation > 0 && count_no_mutation > 0 ? count_mutations/count_no_mutation : 0
         };
 
     } catch (err) {
