@@ -8,7 +8,7 @@ node_js:
 - 'stable'
 branches:
   only:
-  - main
+  - master
 cache:
   directories:
   - node_modules
