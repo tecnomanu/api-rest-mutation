@@ -1,6 +1,6 @@
 # API REST MUTATION
 ### Este es un api-rest para la consulta de mutaciones de cadenas de ADN.
-[![Build Status](https://app.travis-ci.com/tecnomanu/api-rest-mutation.svg?branch=main)](https://app.travis-ci.com/tecnomanu/api-rest-mutation)
+[![Build Status](https://app.travis-ci.com/tecnomanu/api-rest-mutation.svg?branch=master)](https://app.travis-ci.com/tecnomanu/api-rest-mutation)
 
 ## Instalación
 Para instalar este proyecto, primero hacer un clone:
