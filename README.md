@@ -8,7 +8,7 @@ git clone https://github.com/tecnomanu/api-rest-mutation
 ```
 
 ### Paquetes
-Instalar los paquetes basicos que requieren el proyecto para:
+Instalar los paquetes basicos que requieren el proyecto:
 ```
 cd api-rest-mutation
 npm install
