@@ -6,6 +6,6 @@ const routes = express.Router();
 
 routes
   .route("/mutation")
-  .get(DNAsequenceController.hasMutation);
+  .post(DNAsequenceController.hasMutation);
 
 module.exports = routes;

@@ -33,6 +33,8 @@ node start.js
 
 ## End-points
 ### hasMutation
+### Method Allowed: POST
+
 Realiza un analisis de mutuación de una cadena de ADN
 ```
 http://127.0.0.1/mutation
