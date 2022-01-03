@@ -1,6 +1,7 @@
 # API REST MUTATION
 ### Este es un api-rest para la consulta de mutaciones de cadenas de ADN.
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+[![Build Status](https://app.travis-ci.com/tecnomanu/api-rest-mutation.svg?branch=main)](https://app.travis-ci.com/tecnomanu/api-rest-mutation)
+
 ## Instalación
 Para instalar este proyecto, primero hacer un clone:
 ```
@@ -8,7 +9,7 @@ git clone https://github.com/tecnomanu/api-rest-mutation
 ```
 
 ### Paquetes
-Instalar los paquetes basicos que requieren el proyecto:
+Instalar los paquetes basicos que requieren el proyecto para:
 ```
 cd api-rest-mutation
 npm install
@@ -30,11 +31,15 @@ Por utlimo podemos iniciar el servidor con este comando:
 node start.js
 ```
 
+## Unit test
+Se pueden realizar pruebas unitarias de los controladores, para ello solo hay que correr el siguiente comando
+en la terminal
+```
+npm run test
+```
 
 ## End-points
 ### hasMutation
-### Method Allowed: POST
-
 Realiza un analisis de mutuación de una cadena de ADN
 ```
 http://127.0.0.1/mutation
