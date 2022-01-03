@@ -24,11 +24,11 @@ mongoose.connect("mongodb://localhost/dna-mutation", (err, res)=>{
         console.log(`Error on connection to Database: ${err}`);
     else
         console.log(`Connection to DB success`);
+});
 
-    //Inicamos el servidor en el puerto que se haya seteado por el .env
-    app.listen(port, () => {
-        console.log(`El servidor está inicializado en el puerto ${port}`);
-    });
+//Inicamos el servidor en el puerto que se haya seteado por el .env
+const server = app.listen(port, () => {
+    console.log(`El servidor está inicializado en el puerto ${port}`);
 });
 
 //Creamos una ruta de inicio solo para tener una 'hello world' simple de validación.
@@ -39,6 +39,7 @@ app.get('/', function (req, res) {
 //Sumamos los archivos de rutas para cada servicio que se genera en el sistema.
 const DNARouter = require('./api-routes/dna.route'),
     StatsRouter = require('./api-routes/stats.route');
+    
 app.use(DNARouter);
 app.use(StatsRouter);
 
@@ -52,3 +53,5 @@ app.use(function(req, res, next) {
     };
     res.status(404).send(response);
 });
+
+module.exports = {app, server};
